@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Coding + PRD Packet | CSUMB Entrepreneurship Club</title>
+<meta name="description" content="How to plan software with a PRD, direct AI coding agents, test, and launch. Copy-ready prompts and a PRD template from the CSUMB Entrepreneurship Club.">
+<meta name="theme-color" content="#0a2447">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CSUMB Entrepreneurship Club">
+<meta property="og:title" content="AI Coding + PRD Packet | CSUMB Entrepreneurship Club">
+<meta property="og:description" content="How to plan software with a PRD, direct AI coding agents, test, and launch. Copy-ready prompts and a PRD template from the CSUMB Entrepreneurship Club.">
+<meta property="og:url" content="https://ecsumb.club/guides/ai-coding-prd.html">
+<meta property="og:image" content="https://ecsumb.club/assets/img/og-image.png">
+<meta name="twitter:image" content="https://ecsumb.club/assets/img/og-image.png">
+<link rel="canonical" href="https://ecsumb.club/guides/ai-coding-prd.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400..700&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="../index.html"><img src="../assets/img/logo-icon.png" alt="" width="46" height="37"><span>CSUMB Entrepreneurship Club</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../build-something.html">Build Something</a></li><li><a href="../resources.html" aria-current="page">Resources for You</a></li></ul></nav>
+    <a class="ig-link" href="https://www.instagram.com/csumb_entrepreneurship_club/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+    <a class="btn btn-primary header-join" href="https://myraft.csumb.edu/ETPC/club_signup" target="_blank" rel="noopener noreferrer"><span>Join<span class="hide-sm"> on MyRaft</span></span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="../resources.html">Resources for you</a> / AI Coding + PRD Packet</p>
+      <h1>How to get AI to code entire pieces of software for you</h1>
+      <p class="lede">AI coding agents can help you build software projects at 40,000+ lines. The real skill is telling the AI exactly what to build.</p>
+      <div class="guide-actions">
+        <a class="btn btn-outline" href="https://docs.google.com/document/d/1y971xltC6ynmCpc68rfaLzbfDbEUzl24QBedli8_AqE/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Open the Google Doc</a>
+        <button class="btn btn-outline" type="button" data-print>Print this packet</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap guide-layout">
+    <nav class="toc" aria-label="In this packet">
+      <h2>In this packet</h2>
+      <ol>
+        <li><a href="#big-picture">Idea to working software</a></li>
+        <li><a href="#what-is-a-prd">What is a PRD?</a></li>
+        <li><a href="#part-1">Get clear on the product</a></li>
+        <li><a href="#part-2">Make it buildable</a></li>
+        <li><a href="#ambiguity">The rule of ambiguity</a></li>
+        <li><a href="#interview">Prompt: build the PRD with you</a></li>
+        <li><a href="#refine">Prompts: find what is unclear</a></li>
+        <li><a href="#handoff">Hand off to a coding agent</a></li>
+        <li><a href="#build-test-revise">Build, test, revise</a></li>
+        <li><a href="#template">PRD template</a></li>
+        <li><a href="#checklist">Readiness checklist</a></li>
+      </ol>
+    </nav>
+
+    <article class="guide">
+
+      <section id="big-picture">
+        <p class="muted"><strong>Line count is not a quality metric.</strong> &ldquo;40,000+ lines&rdquo; shows the scale AI coding agents can help with. It does not mean more code is better.</p>
+        <p class="lede" style="color:var(--ink)">The leverage is not typing code faster. It is turning an idea into a clear specification, letting AI build from that specification, testing what it made, and iterating.</p>
+        <h2>From idea to working software</h2>
+        <p>A coding agent is powerful, but it cannot read your mind. This process reduces the number of product decisions the AI has to invent for you.</p>
+        <ol class="flow">
+          <li>Idea</li>
+          <li>Test interest and learn from users</li>
+          <li>Draft</li>
+          <li>PRD</li>
+          <li>AI audit and refinement</li>
+          <li>Implementation plan</li>
+          <li>AI coding</li>
+          <li>Testing</li>
+          <li>GitHub</li>
+          <li>Launch and iterate</li>
+        </ol>
+        <div class="callout">
+          <strong class="title">Product design comes after evidence</strong>
+          <p>If you are building a business, do not use a beautiful PRD as a substitute for learning whether real people actually care. Talk to potential users, test the problem, and collect evidence. Then use the PRD to define the product you are going to build.</p>
+        </div>
+        <p class="muted">Tip: open the Google Doc and choose File, then Make a copy, to get your own version you can write notes in.</p>
+      </section>
+
+      <section id="what-is-a-prd">
+        <h2>What is a PRD?</h2>
+        <p>PRD stands for Product Requirements Document. It explains what the product should do, who it is for, why it should exist, what belongs in the first version, and what observable behavior counts as &ldquo;done.&rdquo;</p>
+        <div class="callout">
+          <strong class="title">Think of the PRD as a communication layer</strong>
+          <p>Your idea lives in your head. The PRD converts that idea into something another person, or an AI coding agent, can understand and execute with less guessing.</p>
+        </div>
+        <h3>A useful PRD is</h3>
+        <ul>
+          <li><strong>User-centered:</strong> it starts with the person, problem, and desired outcome.</li>
+          <li><strong>Specific:</strong> important product behavior is written down instead of implied.</li>
+          <li><strong>Scoped:</strong> it is clear what belongs in this version and what does not.</li>
+          <li><strong>Testable:</strong> important requirements have observable acceptance criteria.</li>
+          <li><strong>Editable:</strong> it is a living document that changes when you learn something important.</li>
+        </ul>
+        <h3>A PRD is not</h3>
+        <ul>
+          <li>The code itself.</li>
+          <li>A substitute for talking to users.</li>
+          <li>A technical architecture document.</li>
+          <li>A promise that every feature idea belongs in version one.</li>
+          <li>Something the AI should invent for you without asking questions.</li>
+        </ul>
+      </section>
+
+      <section id="part-1">
+        <span class="kicker">Part 1</span>
+        <h2>Get clear on the product before features</h2>
+        <h3>Start with these questions</h3>
+        <ol>
+          <li><strong>What are you making?</strong> Name the product or service in plain language.</li>
+          <li><strong>Who is it for?</strong> &ldquo;Everyone&rdquo; is almost never useful. Name the primary user or customer.</li>
+          <li><strong>What problem, desire, job, or opportunity exists?</strong> Describe the user&rsquo;s situation before talking about features.</li>
+          <li><strong>What change are you trying to create?</strong> What should become easier, faster, safer, cheaper, more fun, or more possible?</li>
+          <li><strong>When would they use it?</strong> Describe a real situation, not a generic feature list.</li>
+          <li><strong>What evidence do you have?</strong> For a business-focused project: what have real users said or done that suggests this matters?</li>
+        </ol>
+        <h3>Weak vs. stronger product intent</h3>
+        <div class="compare">
+          <div class="weak"><h4>Weak</h4><p>&ldquo;Make an app that helps students network.&rdquo;</p></div>
+          <div class="strong"><h4>Stronger</h4><p>&ldquo;CSUMB student builders often meet interesting people once and then lose the connection. Build a lightweight directory where members can share what they are building, what they can contribute, and who they want to meet, so the club can create thoughtful introductions.&rdquo;</p></div>
+        </div>
+        <p>Ask: what did the stronger version tell the builder that the weak version did not?</p>
+      </section>
+
+      <section id="part-2">
+        <span class="kicker">Part 2</span>
+        <h2>Make it buildable</h2>
+        <h3>MVP</h3>
+        <p>Ask: &ldquo;What is the smallest coherent version that delivers the core value?&rdquo;</p>
+        <ul>
+          <li>MVP does not mean broken, sloppy, or five half-built ideas.</li>
+          <li>It means high craftsmanship on a disciplined footprint.</li>
+          <li>Decide what must exist first, and cut distractions.</li>
+        </ul>
+        <h3>Core feature tiers</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Tier</th><th scope="col">Meaning</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">P0: Must have</th><td>The product fails to solve the core problem without it. Required on day one.</td></tr>
+              <tr><th scope="row">P1: Nice to have</th><td>Valuable, but the first version can still succeed without it.</td></tr>
+              <tr><th scope="row">P2+: Later</th><td>Future expansion or &ldquo;cool&rdquo; ideas that distract from validating the core value.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>User flows</h3>
+        <p>Ask: &ldquo;What does the person actually do, step by step?&rdquo; Think this through for your customer.</p>
+        <div class="callout"><strong class="title">Example</strong><p>User arrives, understands the value proposition, signs up, chooses preferences, and receives the first useful result.</p></div>
+        <h3>Acceptance criteria</h3>
+        <p>For each must-have requirement, define the observable behavior that proves it works.</p>
+        <div class="compare">
+          <div class="weak"><h4>Instead of</h4><p>&ldquo;Build a meeting page.&rdquo;</p></div>
+          <div class="strong"><h4>Write</h4><p>&ldquo;A visitor can see the next meeting date, time, location, and a clear action to join without navigating to another page.&rdquo;</p></div>
+        </div>
+        <h3>Non-goals</h3>
+        <p>Tell the AI what not to build. Explicit non-goals are one of the easiest ways to prevent feature creep.</p>
+      </section>
+
+      <section id="ambiguity">
+        <h2>If the AI has to guess, it will guess</h2>
+        <p>Every unresolved ambiguity should become one of three things:</p>
+        <div class="trio">
+          <div><h4>1. A decision</h4><p>A product tradeoff you still need to resolve yourself.</p></div>
+          <div><h4>2. A PRD detail</h4><p>A requirement, rule, boundary, or behavior you write explicitly.</p></div>
+          <div><h4>3. An AI flag</h4><p>An instruction telling the coding agent to stop and ask you instead of inventing an answer.</p></div>
+        </div>
+        <div class="callout">
+          <strong class="title">The goal is not the longest PRD</strong>
+          <p>The goal is to reduce guessing. A short, precise PRD can be better than a long document full of vague prose.</p>
+        </div>
+      </section>
+
+      <section id="interview">
+        <h2>Prompt: build the PRD with you</h2>
+        <p>Start with an interview, not an instant rewrite. Paste these into the AI tool of your choice.</p>
+        
+        <h3>Interview prompt</h3>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="pr-interview">Copy prompt</button>
+          <pre id="pr-interview">Act as an experienced product manager and interviewer. I am going to describe a product or business idea.
+
+Your job is to help me create a strong Product Requirements Document without inventing important product decisions for me.
+
+Ask me one question at a time. Start with the user, problem, evidence, product vision, and primary use cases. Then move into MVP scope, core features, user flows, requirements, acceptance criteria, non-goals, assumptions, constraints, risks, design references, and open questions.
+
+When my answer is vague, ask a follow-up question instead of filling in the gap yourself.
+
+Do not start coding. Do not choose a technical stack unless I ask you to.
+
+Once the important questions are answered, produce a clean PRD in Markdown that preserves my intent and clearly marks any unresolved questions.</pre>
+        </div>
+        <h3>If you already have a rough idea</h3>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="pr-rough">Copy prompt</button>
+          <pre id="pr-rough">Ask me questions one at a time until you understand the user, problem, and product vision. Do not design features yet. Challenge my assumptions and tell me what evidence I am missing.</pre>
+        </div>
+      </section>
+
+      <section id="refine">
+        <h2>Use AI to find what is still unclear</h2>
+        <p>Refine before you code. Give the AI your draft PRD along with one of these prompts.</p>
+        
+        <h3>Full PRD audit</h3>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="pr-audit">Copy prompt</button>
+          <pre id="pr-audit">I'm going to give you a draft PRD. Act as an experienced product manager helping me make it specific enough that an AI coding agent could build from it with as little guessing as possible.
+
+First, do not rewrite it yet.
+
+Review the PRD and clearly point out:
+- what is vague or ambiguous
+- what an AI developer would still have to guess
+- where the MVP is unclear
+- which features appear to be core versus optional
+- which user flows need to be explained more clearly
+- assumptions I may be making
+- contradictions or missing information
+- anything that could cause the finished product to differ from what I actually intend
+
+Explain why each issue matters.
+
+Then ask me the most important unanswered questions one at a time.
+
+Once I answer enough questions, rewrite the PRD to make it clearer and more buildable while preserving my original intent.
+
+Do not invent important product decisions. If something matters and you do not know the answer, ask me.</pre>
+        </div>
+        <h3>MVP, core features, and user flows</h3>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="pr-mvp">Copy prompt</button>
+          <pre id="pr-mvp">Help me make this PRD more specific and buildable.
+
+Focus especially on:
+1. My MVP: what is the smallest useful version that delivers the core value?
+2. My core features: what absolutely needs to exist in the first version?
+3. My user flows: what does the user actually do, step by step?
+
+Identify anything vague, missing, or something an AI coding agent would have to guess.
+
+Ask me questions one at a time instead of making important decisions for me.
+
+Help me separate must-have features, nice-to-have features, and things that should wait until later.</pre>
+        </div>
+        <h3>Hard-mode developer critique</h3>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="pr-hard">Copy prompt</button>
+          <pre id="pr-hard">Pretend you are the AI developer who has to build this product tomorrow using only this PRD.
+
+What would you still have to guess?
+
+Identify every important ambiguity, missing decision, unclear user flow, vague requirement, unnecessary feature, or assumption that could cause you to build the wrong product.
+
+Do not fix those things by making up answers. Ask me the questions you would need answered.</pre>
+        </div>
+      </section>
+
+      <section id="handoff">
+        <h2>Do not start by saying &ldquo;build it&rdquo;</h2>
+        <p>Put the PRD inside the project so it becomes persistent context. A simple starting structure:</p>
+        <div class="filetree">/PRD.md<br>/README.md<br>/src/ ...<br>/public/ ...</div>
+        <p>Then open your coding agent in the repository and make it prove that it understands the product before it writes code.</p>
+        
+        <h3>Implementation-plan prompt</h3>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="pr-plan">Copy prompt</button>
+          <pre id="pr-plan">Read PRD.md carefully.
+
+Do not start coding yet.
+
+First:
+
+1. Summarize the product you believe I am asking you to build.
+
+2. Identify any remaining ambiguity or unanswered questions.
+
+3. Propose an implementation plan in logical phases.
+
+4. Identify the smallest end-to-end version we should build first.
+
+5. Explain the main pages/components and user flows you expect to implement.
+
+6. Identify any external services, APIs, databases, authentication, or other dependencies you think are required.
+
+Do not make major product decisions that are not supported by the PRD. Ask me instead.
+
+Wait for my approval before beginning implementation.</pre>
+        </div>
+        <h3>After you approve the plan</h3>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="pr-go">Copy prompt</button>
+          <pre id="pr-go">Go ahead and implement the first working version according to the approved implementation plan and PRD.
+
+Prioritize the core user flow and MVP. Test important functionality as you go.
+
+If you reach an important product decision that the PRD does not answer, stop and ask me rather than guessing.
+
+Keep the implementation aligned with the PRD. If you believe the PRD should change, explain why before changing the product direction.</pre>
+        </div>
+      </section>
+
+      <section id="build-test-revise">
+        <h2>Treat the PRD as a living source of truth</h2>
+        <p>Build, test, revise:</p>
+        <ol>
+          <li>Build one coherent slice of the product.</li>
+          <li>Test it against the acceptance criteria and important user flows.</li>
+          <li>Inspect the actual experience, not just whether the code runs.</li>
+          <li>Write down what changed or what you learned.</li>
+          <li>Update the PRD when the product decision changes.</li>
+          <li>Commit meaningful milestones to GitHub.</li>
+          <li>Repeat until the product is ready to launch.</li>
+        </ol>
+        <div class="callout">
+          <strong class="title">Do not optimize for raw code volume</strong>
+          <p>The goal is working software that solves the intended problem. Delete unnecessary code, simplify aggressively, and keep the implementation understandable.</p>
+        </div>
+      </section>
+
+      <section id="template">
+        <h2>PRD template</h2>
+        <p>Copy this into your own document and answer it with an AI interview or by hand. Leave unresolved questions clearly marked instead of making things up.</p>
+        <div class="prompt">
+          <button class="copy" type="button" data-copy="prd-template">Copy template</button>
+          <pre id="prd-template"># PRD
+
+## 1. Product vision
+> What are we building, for whom, and why should it exist?
+
+Your notes:
+
+## 2. User / target audience
+> Who is the primary user? What characteristics matter to this product?
+
+Your notes:
+
+## 3. Problem statement
+> What problem, desire, job, or opportunity are we addressing? What evidence or assumptions support it?
+
+Your notes:
+
+## 4. Use cases / user flows
+> What real situations bring the user here? What are they trying to accomplish? What do they do step by step?
+
+Your notes:
+
+## 5. Goals / success metrics
+> What should improve or become possible? How will we know the first version worked?
+
+Your notes:
+
+## 6. MVP scope
+> What is the smallest coherent version that delivers or tests the core value?
+
+Your notes:
+
+## 7. Requirements
+> List must-have capabilities first. Separate should-have and later items.
+
+Your notes:
+
+## 8. Acceptance criteria
+> For every must-have requirement, what observable behavior proves it is done?
+
+Your notes:
+
+## 9. Non-goals / out of scope
+> What are we explicitly not building in this version?
+
+Your notes:
+
+## 10. Assumptions
+> What do we believe about the user, market, technology, or behavior that may be wrong?
+
+Your notes:
+
+## 11. Constraints
+> Time, budget, tools, platform, data, privacy, policy, device, accessibility, etc.
+
+Your notes:
+
+## 12. Risks / edge cases
+> What could fail? What unusual or error conditions matter?
+
+Your notes:
+
+## 13. Design references
+> Mockups, sketches, examples, content, brand references, interface requirements.
+
+Your notes:
+
+## 14. Open questions
+> What decisions or research are still unresolved?
+
+Your notes:
+
+## 15. AI / build instructions
+> Anything the coding agent must not assume, change, or build without asking. Technical-stack decisions belong here only when they are actually decided.
+
+Your notes:</pre>
+        </div>
+      </section>
+
+      <section id="checklist">
+        <h2>PRD readiness checklist</h2>
+        <p>Before you hand it to AI. Your ticks stay in this browser only.</p>
+        <ul class="checklist"><li><label><input type="checkbox" data-remember="prd-check-0"><span>I can name the primary user without saying &ldquo;everyone.&rdquo;</span></label></li><li><label><input type="checkbox" data-remember="prd-check-1"><span>The problem is clear before the feature list starts.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-2"><span>The MVP boundary is explicit.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-3"><span>Must-have features are separated from later ideas.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-4"><span>The main user flow is written step by step.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-5"><span>Important requirements have acceptance criteria.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-6"><span>Non-goals are written down.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-7"><span>Open questions are marked instead of silently guessed.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-8"><span>The AI is instructed to stop and ask before making major product decisions.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-9"><span>The coding agent will propose an implementation plan before coding.</span></label></li><li><label><input type="checkbox" data-remember="prd-check-10"><span>The PRD is saved with the project and will be updated when decisions change.</span></label></li></ul>
+        <div class="callout navy">
+          <strong class="title">Final principle</strong>
+          <p>You do not need to know how to manually write every line of the software. You do need to think clearly about the customer, the product, the tradeoffs, and what &ldquo;done&rdquo; means. Better specification gives the AI less room to build the wrong thing.</p>
+        </div>
+      </section>
+
+    </article>
+  </div>
+  <section class="cta-band section" aria-labelledby="join-h">
+  <div class="wrap">
+    <h2 id="join-h">Come to a meeting. Bring whatever you have.</h2>
+    <p class="lede">An idea, a business you already run, or just curiosity. All of it counts.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://myraft.csumb.edu/ETPC/club_signup" target="_blank" rel="noopener noreferrer">Join on MyRaft</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/csumb_entrepreneurship_club/" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>Follow us on Instagram</a>
+    </div>
+    <p class="fineprint">MyRaft is CSUMB&rsquo;s official club sign-up and event system.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="../assets/img/logo-full.png" alt="CSUMB Entrepreneurship Club" width="320" height="102">
+        <p class="muted">A club of builders.</p>
+        <p class="muted" data-meeting-line></p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../build-something.html">Build Something</a></li>
+          <li><a href="../resources.html">Resources for You</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="https://myraft.csumb.edu/ETPC/club_signup" target="_blank" rel="noopener noreferrer">Join on MyRaft</a></li>
+          <li><a class="ig-text" href="https://www.instagram.com/csumb_entrepreneurship_club/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-base">&copy; <span data-year>2026</span> CSUMB Entrepreneurship Club</p>
+  </div>
+</footer>
+<script src="../data/site.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
